@@ -23,6 +23,7 @@ app.get('/', function(req, res){
   res.send('Put some API usage here if you like');
 });
 
+//////////////////////////////
 /// Simple Get
 /// Example what it returns
 /*
@@ -41,6 +42,7 @@ app.get('/account', function(req, res) {
     account.getUsers(res);
     });
 
+/////////////////////
 // Simple Post 
 /// Example of the body POST (note, the client must set Content-Type: application/json)
 /*
@@ -51,6 +53,15 @@ app.get('/account', function(req, res) {
 
 app.post('/account', function(req, res) {
     account.addToGuestBook(req, res);
+    });
+
+
+///////////////////
+/// HTTP DELETE
+/// This just reset the account
+
+app.delete('/account', function(req,res) {
+    account.reset();
     });
 
 app.listen(port);

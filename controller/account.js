@@ -8,6 +8,10 @@ exports.getUsers = function(res ) {
     return new getUsers(res);
     }
 
+exports.reset = function() {
+    return new reset();
+    }
+
 var Guests = [];
 
 /// Simply just user to the guest book
@@ -26,9 +30,17 @@ function addToGuestBook(req, res) {
     };
 
 
+/// Getting all the guests, sorted by most recently visited
 function getUsers(res) {
     return res.send(Guests);
     }
+
+
+function reset() {
+    Guests = [];
+    };
+
+
 
 
 
