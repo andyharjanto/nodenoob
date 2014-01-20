@@ -1,0 +1,13 @@
+{
+  "name": "NodeNoob",
+  "version": "0.0.0",
+  "description": "NodeNoob",
+  "main": "server.js",
+  "author": {
+    "name": "Andy",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
